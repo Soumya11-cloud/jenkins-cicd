@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Soumya11-cloud/jenkins-cicd'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t my-cicd-app .'
